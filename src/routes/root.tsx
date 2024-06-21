@@ -2,8 +2,9 @@ import { useLoaderData } from "react-router-dom";
 import { Product } from "../types/product";
 
 export async function loader() {
-  const response = await fetch("http://localhost:3000/products");
+  const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/products`);
   const products: Product[] = await response.json();
+
   return { products };
 }
 
