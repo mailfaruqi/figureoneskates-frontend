@@ -1,5 +1,5 @@
 import { useLoaderData } from "react-router-dom";
-import { Product } from "../types/product";
+import { Product } from "../types";
 
 export async function loader() {
   const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/products`);
